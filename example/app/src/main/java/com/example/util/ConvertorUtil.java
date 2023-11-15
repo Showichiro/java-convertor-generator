@@ -1,10 +1,8 @@
 package com.example.util;
 
-// source
 import com.example.entity.ABC;
-
-// destination
 import com.example.response.XYZ;
+import java.util.List;
 
 public class ConvertorUtil {
   public static XYZ convert(
@@ -21,5 +19,9 @@ public class ConvertorUtil {
     destination.setAge(source.getAge());
 
     return destination;
+  }
+
+  public String toString() {
+    return "";
   }
 }

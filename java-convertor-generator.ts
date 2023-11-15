@@ -24,11 +24,11 @@ Examples:
 
 const TEMPLATE = `package <%= it.packageName %>;
 
-// source
 import <%= it.sourcePackage %>.<%= it.sourceClass %>;
-
-// destination
 import <%= it.destinationPackage %>.<%= it.destinationClass %>;
+<% if(it.additionalPackages != null) { %>
+<%~ it.additionalPackages %> 
+<% } %>
 
 public class <%= it.className %> {
   public static <%= it.destinationClass %> convert(
@@ -44,6 +44,10 @@ public class <%= it.className %> {
     <% }) %>
     return destination;
   }
+
+<% if(it.additionalMethod != null) { %>
+  <%~ it.additionalMethod %>
+<% } %>
 }
 
 ` as const;
@@ -64,7 +68,9 @@ type Config =
   | "source_package"
   | "source_class"
   | "destination_package"
-  | "destination_class";
+  | "destination_class"
+  | "additional_packages"
+  | "additional_method";
 
 type ConfigType = {
   config: Config;
@@ -199,6 +205,8 @@ const capitalize = (str: string): string =>
         destination_property: capitalize(val.destination_property),
         method: val.method,
       })),
+      additionalPackages: config.get("additional_packages") ?? null,
+      additionalMethod: config.get("additional_method") ?? null,
     });
     const filename = `${config.get("class_name") ?? DEFAULT_CLASS_NAME}.java`;
     echo`generate ${filename}...`;
