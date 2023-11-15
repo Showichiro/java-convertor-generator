@@ -7,6 +7,6 @@ public class XYZ {
     private String x;
     private Boolean y;
     private String z;
-    private String name;
+    private String studentName;
     private Integer age;
 }

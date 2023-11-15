@@ -2,7 +2,6 @@ package com.example.util;
 
 import com.example.entity.ABC;
 import com.example.response.XYZ;
-import java.util.List;
 
 public class ConvertorUtil {
   public static XYZ convert(
@@ -14,7 +13,7 @@ public class ConvertorUtil {
 
     destination.setZ(String.valueOf(source.getC()));
 
-    destination.setName(source.getName());
+    destination.setStudentName(source.getStudentName());
 
     destination.setAge(source.getAge());
 

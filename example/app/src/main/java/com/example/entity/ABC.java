@@ -11,6 +11,6 @@ public class ABC {
     private String a;
     private Boolean b;
     private Integer c;
-    private String name;
+    private String studentName;
     private Integer age;
 }
