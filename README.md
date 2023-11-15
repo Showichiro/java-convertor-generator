@@ -1,5 +1,7 @@
 # java-convertor-generator
 
+[![Deno](https://github.com/Showichiro/java-convertor-generator/actions/workflows/deno.yml/badge.svg)](https://github.com/Showichiro/java-convertor-generator/actions/workflows/deno.yml)
+
 # Install
 
 ```sh
