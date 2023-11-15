@@ -5,7 +5,7 @@
 # Install
 
 ```sh
-deno install https://raw.githubusercontent.com/Showichiro/java-convertor-generator/main/java-convertor-generator.ts
+deno install -A https://raw.githubusercontent.com/Showichiro/java-convertor-generator/main/java-convertor-generator.ts
 ```
 
 # Usage
