@@ -175,7 +175,7 @@ const capitalize = (str: string): string =>
     const config = new Map(
       XLSX.utils
         .sheet_to_json<ConfigType>(configSheet)
-        .map<[Config, string]>((val) => [val.config, val.value])
+        .map<[Config, string]>((val) => [val.config, val.value]),
     );
     if (
       !(
